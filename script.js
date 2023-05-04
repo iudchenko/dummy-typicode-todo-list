@@ -37,7 +37,8 @@ const createTodo = (e) => {
     },
   })
     .then((res) => res.json())
-    .then((data) => addToDoToDOM(data));
+    .then((data) => addToDoToDOM(data))
+    .then(() => (document.getElementById("title").value = ""));
 };
 
 const toggleCompleted = (e) => {
